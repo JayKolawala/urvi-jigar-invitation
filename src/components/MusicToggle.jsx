@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Volume2, VolumeX, Music } from 'lucide-react';
+import { Music } from 'lucide-react';
 
 export default function MusicToggle() {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const audioCtxRef = useRef(null);
   const loopIntervalRef = useRef(null);
+  const userMutedRef = useRef(false);
 
   // Soft romantic harp/bell pentatonic progression (D major / B minor romantic frequencies)
   const notes = [
@@ -78,8 +79,31 @@ export default function MusicToggle() {
     });
   };
 
+  const startPlaying = async () => {
+    if (userMutedRef.current) return;
+    try {
+      if (!audioCtxRef.current) {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        audioCtxRef.current = new AudioContextClass();
+      }
+      if (audioCtxRef.current.state === 'suspended') {
+        await audioCtxRef.current.resume();
+      }
+      if (audioCtxRef.current.state === 'running' && !loopIntervalRef.current) {
+        scheduleMelody();
+        loopIntervalRef.current = setInterval(() => {
+          scheduleMelody();
+        }, 6200);
+        setIsPlaying(true);
+      }
+    } catch {
+      // Audio autoplay policy will be satisfied on first user interaction
+    }
+  };
+
   const toggleMusic = async () => {
     if (isPlaying) {
+      userMutedRef.current = true;
       if (loopIntervalRef.current) {
         clearInterval(loopIntervalRef.current);
         loopIntervalRef.current = null;
@@ -88,28 +112,37 @@ export default function MusicToggle() {
         await audioCtxRef.current.suspend();
       }
       setIsPlaying(false);
-      sessionStorage.setItem('engagement_music_pref', 'muted');
     } else {
-      if (!audioCtxRef.current) {
-        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-        audioCtxRef.current = new AudioContextClass();
-      }
-      if (audioCtxRef.current.state === 'suspended') {
-        await audioCtxRef.current.resume();
-      }
-      
-      scheduleMelody();
-      loopIntervalRef.current = setInterval(() => {
-        scheduleMelody();
-      }, 6200);
-
+      userMutedRef.current = false;
+      await startPlaying();
       setIsPlaying(true);
-      sessionStorage.setItem('engagement_music_pref', 'playing');
     }
   };
 
   useEffect(() => {
+    // Attempt automatic playback on mount
+    startPlaying();
+
+    // Auto-unlock on first user tap/click/scroll if browser blocked initial autoplay
+    const unlockOnGesture = () => {
+      if (!userMutedRef.current) {
+        startPlaying();
+      }
+      cleanupListeners();
+    };
+
+    const cleanupListeners = () => {
+      window.removeEventListener('click', unlockOnGesture);
+      window.removeEventListener('touchstart', unlockOnGesture);
+      window.removeEventListener('scroll', unlockOnGesture);
+    };
+
+    window.addEventListener('click', unlockOnGesture, { passive: true });
+    window.addEventListener('touchstart', unlockOnGesture, { passive: true });
+    window.addEventListener('scroll', unlockOnGesture, { passive: true });
+
     return () => {
+      cleanupListeners();
       if (loopIntervalRef.current) {
         clearInterval(loopIntervalRef.current);
       }
@@ -120,32 +153,32 @@ export default function MusicToggle() {
   }, []);
 
   return (
-    <div className="fixed bottom-5 right-5 z-40">
+    <div className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40">
       <button
         onClick={toggleMusic}
         type="button"
         aria-label={isPlaying ? "Mute romantic background melody" : "Play romantic background melody"}
-        className="group flex items-center gap-2.5 px-3.5 py-2.5 rounded-full bg-pearl/90 backdrop-blur-md border border-gold/40 shadow-luxury hover:shadow-luxury-hover hover:border-gold transition-all duration-300 text-charcoal active:scale-95"
+        className="group flex items-center gap-2 px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-full bg-pearl/95 backdrop-blur-md border border-gold/40 shadow-luxury hover:shadow-luxury-hover hover:border-gold transition-all duration-300 text-charcoal active:scale-95 cursor-pointer"
       >
         {isPlaying ? (
           <>
             {/* Animated Equalizer Bars */}
-            <div className="flex items-end gap-[3px] h-4 w-4">
-              <span className="w-[3px] bg-gold-dark rounded-full eq-bar-1"></span>
-              <span className="w-[3px] bg-rose-dark rounded-full eq-bar-2"></span>
-              <span className="w-[3px] bg-gold-dark rounded-full eq-bar-3"></span>
-              <span className="w-[3px] bg-rose rounded-full eq-bar-4"></span>
+            <div className="flex items-end gap-[3px] h-3.5 w-3.5">
+              <span className="w-[2.5px] bg-gold-dark rounded-full eq-bar-1"></span>
+              <span className="w-[2.5px] bg-rose-dark rounded-full eq-bar-2"></span>
+              <span className="w-[2.5px] bg-gold-dark rounded-full eq-bar-3"></span>
+              <span className="w-[2.5px] bg-rose rounded-full eq-bar-4"></span>
             </div>
-            <span className="text-xs font-sans font-medium tracking-wider text-charcoal uppercase">
+            <span className="text-[11px] sm:text-xs font-sans font-medium tracking-wider text-charcoal uppercase">
               Melody On
             </span>
           </>
         ) : (
           <>
             <div className="relative">
-              <Music className="w-4 h-4 text-gold-dark group-hover:scale-110 transition-transform" />
+              <Music className="w-3.5 h-3.5 text-gold-dark group-hover:scale-110 transition-transform" />
             </div>
-            <span className="text-xs font-sans font-medium tracking-wider text-charcoal/80 uppercase">
+            <span className="text-[11px] sm:text-xs font-sans font-medium tracking-wider text-charcoal/80 uppercase">
               Play Music
             </span>
           </>
