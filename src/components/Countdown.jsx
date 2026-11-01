@@ -15,7 +15,7 @@ export default function Countdown() {
       "Engagement Ceremony of Urvi & Jigar.\nVenue: Royal Dine Restaurant & Banquet\nMap: https://maps.app.goo.gl/RsuATqWArgGbvxra7\nHosts: Satish Kolawala & Jagruti Kolawala\nWe look forward to celebrating with you!"
     );
     const location = encodeURIComponent(
-      "Royal Dine Restaurant & Banquet, 2nd, Imperial Mall, Hazira - Adajan Rd, above Star Bazar, Adajan Gam, Surat, Gujarat 395009"
+      "Royal Dine Restaurant & Banquet, Nr Bagban Kratos Circle Green city Road, Gaurav Path Road, Pal Gam, Surat, Gujarat 394510"
     );
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
   };
@@ -35,7 +35,7 @@ export default function Countdown() {
       "DTEND:20261121T083000Z",
       "SUMMARY:Urvi & Jigar — Engagement Ceremony",
       "DESCRIPTION:Engagement Ceremony of Urvi & Jigar. Venue: Royal Dine Restaurant & Banquet. Hosts: Satish Kolawala & Jagruti Kolawala.",
-      "LOCATION:Royal Dine Restaurant & Banquet\\, 2nd\\, Imperial Mall\\, Hazira - Adajan Rd\\, above Star Bazar\\, Adajan Gam\\, Surat\\, Gujarat 395009",
+      "LOCATION:Royal Dine Restaurant & Banquet\\, Nr Bagban Kratos Circle Green city Road\\, Gaurav Path Road\\, Pal Gam\\, Surat\\, Gujarat 394510",
       "STATUS:CONFIRMED",
       "END:VEVENT",
       "END:VCALENDAR",

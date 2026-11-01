@@ -37,34 +37,17 @@ function App() {
         />
       )}
 
-      {/* Mobile-Optimized Luxury Sticky Header */}
-      <header className="sticky top-0 z-30 w-full bg-pearl/90 backdrop-blur-md border-b border-gold/25 transition-all duration-300">
-        <div className="max-w-5xl mx-auto px-3 sm:px-6 h-13 sm:h-16 flex items-center justify-between">
-          {/* Logo / Monogram */}
+      {/* Luxury Sticky Header - Centered Logo Only */}
+      <header className="sticky top-0 z-30 w-full bg-pearl/90 backdrop-blur-md border-b border-gold/20 transition-all duration-300">
+        <div className="max-w-5xl mx-auto px-4 h-12 sm:h-14 flex items-center justify-center">
           <a 
             href="#hero" 
-            className="flex items-center gap-1.5 group text-charcoal hover:text-gold-dark transition-colors py-1 shrink-0"
+            className="flex items-center justify-center group text-charcoal hover:text-gold-dark transition-colors py-1"
           >
-            <span className="font-cormorant font-bold text-lg sm:text-2xl tracking-wide text-charcoal">
-              U <span className="font-script text-gold-dark text-base sm:text-xl">&amp;</span> J
+            <span className="font-cormorant font-bold text-xl sm:text-2xl tracking-widest text-charcoal">
+              U <span className="font-script text-gold-dark text-lg sm:text-xl">&amp;</span> J
             </span>
           </a>
-
-          {/* Quick Section Navigation Links */}
-          <nav className="flex items-center gap-2 sm:gap-6 text-[10px] sm:text-xs font-editorial uppercase tracking-[0.12em] sm:tracking-[0.2em] text-charcoal-light font-medium">
-            <a href="#hero" className="hover:text-gold-deep transition-colors py-1">
-              Ceremony
-            </a>
-            <a href="#invitation" className="hover:text-gold-deep transition-colors py-1">
-              Invitation
-            </a>
-            <a href="#countdown" className="hover:text-gold-deep transition-colors py-1">
-              Countdown
-            </a>
-            <a href="#details" className="hover:text-gold-deep transition-colors py-1">
-              Details
-            </a>
-          </nav>
         </div>
       </header>
 

@@ -115,34 +115,6 @@ export default function EventDetails() {
             );
           })}
         </div>
-
-        {/* Venue Address Highlights Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-6 sm:mt-10 p-5 sm:p-6 rounded-2xl bg-pearl-light/80 border border-gold/30 text-center max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4"
-        >
-          <div className="text-center sm:text-left">
-            <p className="font-editorial text-[11px] sm:text-xs uppercase tracking-widest text-deep-olive font-semibold">
-              Location Landmark
-            </p>
-            <p className="font-sans text-xs text-charcoal-light mt-0.5">
-              Royal Dine Banquet &bull; Above Star Bazar &bull; Hazira - Adajan Rd, Surat
-            </p>
-          </div>
-
-          <a
-            href={directionsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-editorial uppercase tracking-wider text-gold-deep hover:text-charcoal font-semibold underline underline-offset-4 transition-colors shrink-0 py-1"
-          >
-            <span>Open in Google Maps</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
-        </motion.div>
       </div>
     </section>
   );
