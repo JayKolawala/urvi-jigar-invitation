@@ -2,10 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Music } from 'lucide-react';
 
 export default function MusicToggle() {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const audioCtxRef = useRef(null);
   const loopIntervalRef = useRef(null);
   const userMutedRef = useRef(false);
+  const audioStartedRef = useRef(false); // tracks if audio has actually started
 
   // Soft romantic harp/bell pentatonic progression (D major / B minor romantic frequencies)
   const notes = [
@@ -94,6 +95,7 @@ export default function MusicToggle() {
         loopIntervalRef.current = setInterval(() => {
           scheduleMelody();
         }, 6200);
+        audioStartedRef.current = true;
         setIsPlaying(true);
       }
     } catch {
@@ -102,6 +104,13 @@ export default function MusicToggle() {
   };
 
   const toggleMusic = async () => {
+    // If audio hasn't actually started yet (blocked by browser autoplay policy),
+    // treat first button tap as "start" not "stop"
+    if (!audioStartedRef.current) {
+      userMutedRef.current = false;
+      await startPlaying();
+      return;
+    }
     if (isPlaying) {
       userMutedRef.current = true;
       if (loopIntervalRef.current) {
@@ -123,8 +132,10 @@ export default function MusicToggle() {
     // Attempt automatic playback on mount
     startPlaying();
 
-    // Auto-unlock on first user tap/click/scroll if browser blocked initial autoplay
-    const unlockOnGesture = () => {
+    // Auto-unlock on first user gesture (scroll, touch) if browser blocked initial autoplay
+    // Note: button clicks are handled by toggleMusic directly, so exclude them
+    const unlockOnGesture = (e) => {
+      if (e.target?.closest('button')) return; // let button handle its own click
       if (!userMutedRef.current) {
         startPlaying();
       }

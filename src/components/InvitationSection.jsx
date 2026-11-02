@@ -22,7 +22,7 @@ export default function InvitationSection() {
           <div className="absolute inset-4 sm:inset-5 border border-gold/15 rounded-lg pointer-events-none" />
 
           {/* Top Ornamental Monogram Emblem */}
-          <div className="mb-4">
+          <div className="">
             <MonogramCrest />
           </div>
 

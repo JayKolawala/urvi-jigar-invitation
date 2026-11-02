@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
-import waxSealIsolated from '../assets/wax-seal-isolated.png';
+import ujLogo from '../assets/uj-logo.png';
 
 export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) {
   const [stage, setStage] = useState('sealed'); // 'sealed' | 'opening' | 'revealed'
@@ -80,9 +80,9 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
 
         {/* Mobile-First Envelope Presentation Container */}
         <div className="relative w-full max-w-[325px] sm:max-w-[400px] md:max-w-[450px] flex flex-col items-center my-auto">
-          
+
           {/* Header invitation caption */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -98,14 +98,14 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
 
           {/* 3D Perspective Envelope Container */}
           <div className="relative w-full aspect-[16/11] perspective-1000">
-            
+
             {/* Outer Envelope Wrapper */}
             <motion.div
               initial={{ scale: 0.96, opacity: 0 }}
-              animate={{ 
-                scale: 1, 
-                opacity: 1, 
-                y: stage === 'revealed' ? -8 : 0 
+              animate={{
+                scale: 1,
+                opacity: 1,
+                y: stage === 'revealed' ? -8 : 0
               }}
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="relative w-full h-full rounded-lg shadow-xl bg-[#F7F2E8] border border-gold/40 preserve-3d"
@@ -120,18 +120,18 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                 initial={{ y: 0, opacity: 0, scale: 0.95 }}
                 animate={
                   stage === 'opening' || stage === 'revealed'
-                    ? { 
-                        y: -95, 
-                        opacity: 1, 
-                        scale: 1.02, 
-                        zIndex: 35 
-                      }
+                    ? {
+                      y: -95,
+                      opacity: 1,
+                      scale: 1.02,
+                      zIndex: 35
+                    }
                     : { y: 0, opacity: 0, scale: 0.95, zIndex: 5 }
                 }
-                transition={{ 
-                  delay: 0.35, 
-                  duration: 1.0, 
-                  ease: [0.16, 1, 0.3, 1] 
+                transition={{
+                  delay: 0.35,
+                  duration: 1.0,
+                  ease: [0.16, 1, 0.3, 1]
                 }}
                 className="absolute inset-x-2.5 sm:inset-x-4 top-2 bottom-2 bg-[#FFFCF7] rounded-md shadow-2xl border-2 border-gold/60 p-3 sm:p-5 flex flex-col items-center justify-between text-center deckle-card"
               >
@@ -149,7 +149,7 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
 
                 {/* Couple Names */}
                 <div className="my-auto py-0.5">
-                  <motion.h2 
+                  <motion.h2
                     initial={{ opacity: 0, y: 8 }}
                     animate={stage === 'revealed' ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.7, duration: 0.6 }}
@@ -157,7 +157,7 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                   >
                     Urvi
                   </motion.h2>
-                  <motion.span 
+                  <motion.span
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={stage === 'revealed' ? { opacity: 1, scale: 1 } : {}}
                     transition={{ delay: 0.85, duration: 0.5 }}
@@ -165,7 +165,7 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                   >
                     &amp;
                   </motion.span>
-                  <motion.h2 
+                  <motion.h2
                     initial={{ opacity: 0, y: 8 }}
                     animate={stage === 'revealed' ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 1.0, duration: 0.6 }}
@@ -188,15 +188,15 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
 
               {/* Envelope Pocket (Front Face: Left, Right, Bottom Flaps) */}
               <div className="absolute inset-0 pointer-events-none z-20 overflow-hidden rounded-lg">
-                <div 
+                <div
                   className="absolute inset-0 bg-[#FAF6EE]"
                   style={{
                     clipPath: 'polygon(0 0, 48% 52%, 0 100%)',
                     filter: 'drop-shadow(2px 0 3px rgba(57,56,50,0.04))',
                   }}
                 />
-                
-                <div 
+
+                <div
                   className="absolute inset-0 bg-[#F8F4EA]"
                   style={{
                     clipPath: 'polygon(100% 0, 52% 52%, 100% 100%)',
@@ -204,7 +204,7 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                   }}
                 />
 
-                <div 
+                <div
                   className="absolute inset-0 bg-[#FFFDF9] border-b border-gold/30"
                   style={{
                     clipPath: 'polygon(0 100%, 50% 48%, 100% 100%)',
@@ -225,7 +225,7 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                 className="absolute top-0 left-0 right-0 h-full preserve-3d pointer-events-none"
               >
                 {/* Front of the triangular flap (visible when closed) */}
-                <div 
+                <div
                   className="absolute inset-0 backface-hidden"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 50% 55%)',
@@ -234,17 +234,17 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                   }}
                 >
                   <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <polygon 
-                      points="0,0 100,0 50,55" 
-                      fill="#FCFAF5" 
-                      stroke="#D9BD8A" 
-                      strokeWidth="0.6" 
+                    <polygon
+                      points="0,0 100,0 50,55"
+                      fill="#FCFAF5"
+                      stroke="#D9BD8A"
+                      strokeWidth="0.6"
                     />
                   </svg>
                 </div>
 
                 {/* Back of the flap (revealed when flipped 180deg upwards) */}
-                <div 
+                <div
                   className="absolute inset-0"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 50% 55%)',
@@ -254,11 +254,11 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                   }}
                 >
                   <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <polygon 
-                      points="0,0 100,0 50,55" 
-                      fill="#F5EFE4" 
-                      stroke="#D9BD8A" 
-                      strokeWidth="0.5" 
+                    <polygon
+                      points="0,0 100,0 50,55"
+                      fill="#F5EFE4"
+                      stroke="#D9BD8A"
+                      strokeWidth="0.5"
                     />
                   </svg>
                 </div>
@@ -267,7 +267,7 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
               {/* Perfectly Centered Wax Seal Container (Guaranteed Horizontal & Vertical Dead-Center) */}
               <AnimatePresence>
                 {stage === 'sealed' && (
-                  <div 
+                  <div
                     className="absolute inset-x-0 z-40 flex items-center justify-center pointer-events-none"
                     style={{
                       top: '55%',
@@ -285,11 +285,11 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                       {/* Gentle gold pulse halo */}
                       <div className="absolute inset-0 rounded-full bg-gold/30 animate-ping opacity-50 scale-110 pointer-events-none" />
 
-                      {/* Isolated Wax Seal PNG */}
-                      <img 
-                        src={waxSealIsolated} 
-                        alt="U & J Gold Wax Seal" 
-                        className="w-14 h-14 sm:w-16 sm:h-16 object-contain drop-shadow-[0_6px_12px_rgba(57,56,50,0.35)] transition-transform duration-300 group-hover:scale-105 active:scale-95 block mx-auto"
+                      {/* UJ Monogram Logo as Wax Seal */}
+                      <img
+                        src={ujLogo}
+                        alt="U & J Monogram Seal"
+                        className="w-24 h-24 sm:w-28 sm:h-28 object-contain rounded-full drop-shadow-[0_6px_12px_rgba(57,56,50,0.35)] transition-transform duration-300 group-hover:scale-105 active:scale-95 block mx-auto"
                       />
                     </motion.div>
                   </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ujLogo from './assets/uj-logo.png';
 import InvitationOpening from './components/InvitationOpening';
 import HeroSection from './components/HeroSection';
 import InvitationSection from './components/InvitationSection';
@@ -30,23 +31,25 @@ function App() {
 
       {/* Interactive Envelope Opening Sequence Overlay */}
       {!isInvitationOpen && (
-        <InvitationOpening 
-          isOpen={isInvitationOpen} 
-          onOpenComplete={handleOpenComplete} 
+        <InvitationOpening
+          isOpen={isInvitationOpen}
+          onOpenComplete={handleOpenComplete}
           onReplay={handleReplayInvitation}
         />
       )}
 
       {/* Luxury Sticky Header - Centered Logo Only */}
       <header className="sticky top-0 z-30 w-full bg-pearl/90 backdrop-blur-md border-b border-gold/20 transition-all duration-300">
-        <div className="max-w-5xl mx-auto px-4 h-12 sm:h-14 flex items-center justify-center">
-          <a 
-            href="#hero" 
-            className="flex items-center justify-center group text-charcoal hover:text-gold-dark transition-colors py-1"
+        <div className="max-w-5xl mx-auto h-12 sm:h-14 flex items-center justify-center">
+          <a
+            href="#hero"
+            className="flex items-center justify-center group py-1"
           >
-            <span className="font-cormorant font-bold text-xl sm:text-2xl tracking-widest text-charcoal">
-              U <span className="font-script text-gold-dark text-lg sm:text-xl">&amp;</span> J
-            </span>
+            <img
+              src={ujLogo}
+              alt="Urvi & Jigar Monogram"
+              className="h-9 sm:h-10 w-auto object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
+            />
           </a>
         </div>
       </header>

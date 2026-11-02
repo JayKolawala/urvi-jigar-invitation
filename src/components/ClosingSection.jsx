@@ -12,7 +12,7 @@ export default function ClosingSection({ onReplayInvitation }) {
 
       <div className="max-w-2xl mx-auto relative z-10 flex flex-col items-center">
         {/* Soft Floral Composition Accent */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -24,7 +24,7 @@ export default function ClosingSection({ onReplayInvitation }) {
             alt="Botanical floral bouquet"
             className="w-full h-auto object-contain mix-blend-multiply"
           />
-        </motion.div>
+        </motion.div> */}
 
         {/* Closing Heading */}
         <motion.div

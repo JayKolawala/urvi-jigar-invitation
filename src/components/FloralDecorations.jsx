@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
+import ujLogo from '../assets/uj-logo.png';
 
 // Floating rose & gold petals component
 export function FloatingPetals() {
@@ -132,19 +133,11 @@ export function BotanicalCorner({ position = 'top-left', className = '' }) {
 export function MonogramCrest({ className = '' }) {
   return (
     <div className={`inline-flex flex-col items-center justify-center ${className}`}>
-      <div className="relative flex items-center justify-center w-20 h-20 md:w-24 md:h-24">
-        {/* Outer decorative laurel ring */}
-        <svg viewBox="0 0 100 100" className="w-full h-full text-gold">
-          <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="0.8" strokeDasharray="3 2" opacity="0.6" />
-          <circle cx="50" cy="50" r="42" fill="#FFFCF7" stroke="#D9BD8A" strokeWidth="1.2" />
-        </svg>
-        {/* Monogram letters */}
-        <div className="absolute inset-0 flex items-center justify-center font-cormorant font-bold text-2xl md:text-3xl tracking-tight text-charcoal">
-          <span className="text-gold-dark">U</span>
-          <span className="text-rose font-script text-xl md:text-2xl mx-0.5">&amp;</span>
-          <span className="text-gold-dark">J</span>
-        </div>
-      </div>
+      <img
+        src={ujLogo}
+        alt="U & J Monogram"
+        className="w-32 h-32 md:w-48 md:h-48 object-contain"
+      />
     </div>
   );
 }
