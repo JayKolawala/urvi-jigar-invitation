@@ -94,6 +94,9 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
             <p className="font-editorial text-[9px] sm:text-xs tracking-[0.25em] text-deep-olive uppercase mt-0.5">
               The Engagement of Urvi &amp; Jigar
             </p>
+            <p className="font-editorial text-[8px] sm:text-[10px] tracking-[0.2em] text-charcoal-light uppercase mt-1">
+              by Jagruti &amp; Satish Kolawala &amp; Family
+            </p>
           </motion.div>
 
           {/* 3D Perspective Envelope Container */}

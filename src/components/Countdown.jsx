@@ -12,7 +12,7 @@ export default function Countdown() {
     const title = encodeURIComponent("Urvi & Jigar — Engagement Ceremony");
     const dates = "20261121T043000Z/20261121T083000Z";
     const details = encodeURIComponent(
-      "Engagement Ceremony of Urvi & Jigar.\nVenue: Royal Dine Restaurant & Banquet\nMap: https://maps.app.goo.gl/RsuATqWArgGbvxra7\nHosts: Satish Kolawala & Jagruti Kolawala\nWe look forward to celebrating with you!"
+      "Engagement Ceremony of Urvi & Jigar.\nVenue: Royal Dine Restaurant & Banquet\nMap: https://maps.app.goo.gl/RsuATqWArgGbvxra7\nInvited by: Jagruti Kolawala & Satish Kolawala & Family (Parents of Bride)\nWe look forward to celebrating with you!"
     );
     const location = encodeURIComponent(
       "Royal Dine Restaurant & Banquet, Nr Bagban Kratos Circle Green city Road, Gaurav Path Road, Pal Gam, Surat, Gujarat 394510"
@@ -34,7 +34,7 @@ export default function Countdown() {
       "DTSTART:20261121T043000Z",
       "DTEND:20261121T083000Z",
       "SUMMARY:Urvi & Jigar — Engagement Ceremony",
-      "DESCRIPTION:Engagement Ceremony of Urvi & Jigar. Venue: Royal Dine Restaurant & Banquet. Hosts: Satish Kolawala & Jagruti Kolawala.",
+      "DESCRIPTION:Engagement Ceremony of Urvi & Jigar. Venue: Royal Dine Restaurant & Banquet. Invited by: Jagruti Kolawala & Satish Kolawala & Family (Parents of Bride).",
       "LOCATION:Royal Dine Restaurant & Banquet\\, Nr Bagban Kratos Circle Green city Road\\, Gaurav Path Road\\, Pal Gam\\, Surat\\, Gujarat 394510",
       "STATUS:CONFIRMED",
       "END:VEVENT",

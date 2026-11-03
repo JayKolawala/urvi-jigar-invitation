@@ -79,9 +79,10 @@ export default function ClosingSection({ onReplayInvitation }) {
           <span className="font-script text-2xl sm:text-3xl text-gold-dark">
             With love and blessings,
           </span>
-          <p className="font-editorial text-xs sm:text-sm tracking-[0.2em] uppercase text-charcoal font-semibold mt-1.5">
-            Satish Kolawala &amp; Jagruti Kolawala
+          <p className="font-editorial text-xs sm:text-sm md:text-base tracking-[0.2em] uppercase text-charcoal font-semibold mt-1.5">
+            Jagruti Kolawala <br /> Satish Kolawala <br />&amp; Family
           </p>
+
         </motion.div>
 
         {/* Replay Envelope Call-to-action */}

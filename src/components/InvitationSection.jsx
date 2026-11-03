@@ -41,16 +41,30 @@ export default function InvitationSection() {
           {/* Ornamental Divider */}
           <SectionDivider className="my-6 md:my-8" />
 
-          {/* Invitation Invitation Body Message */}
+          {/* Invitation Body Message */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="space-y-6 max-w-xl mx-auto"
+            className="space-y-5 max-w-xl mx-auto"
           >
             <p className="font-cormorant text-lg sm:text-xl md:text-2xl text-charcoal leading-relaxed font-normal">
-              With immense joy and love, we invite you to celebrate the engagement ceremony of
+              With immense joy and the blessings of Almighty &amp; Family,
+            </p>
+
+            {/* Invitors / Parents of Bride */}
+            <div className="py-1">
+              <p className="font-editorial text-sm sm:text-base md:text-lg tracking-[0.2em] uppercase text-charcoal font-bold">
+                Jagruti Kolawala <br /> Satish Kolawala
+              </p>
+              <p className="font-editorial text-[10px] sm:text-xs tracking-[0.22em] uppercase text-deep-olive font-semibold mt-1">
+                &amp; Family
+              </p>
+            </div>
+
+            <p className="font-cormorant text-lg sm:text-xl md:text-2xl text-charcoal leading-relaxed">
+              cordially invite you to celebrate the engagement ceremony of their beloved daughter
             </p>
 
             {/* Couple Names */}
@@ -82,11 +96,12 @@ export default function InvitationSection() {
             className="mt-10 pt-6 border-t border-gold/30 flex flex-col items-center"
           >
             <span className="font-script text-2xl sm:text-3xl text-gold-dark">
-              With love,
+              With love &amp; blessings,
             </span>
             <p className="font-editorial text-sm sm:text-base tracking-[0.2em] uppercase text-charcoal font-semibold mt-2">
-              Satish Kolawala &amp; Jagruti Kolawala
+              Jagruti Kolawala &amp; Satish Kolawala &amp; Family
             </p>
+
           </motion.div>
         </motion.div>
       </div>
