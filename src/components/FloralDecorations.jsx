@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
-import ujLogo from '../assets/uj-logo.png';
+import ujLogo from '../assets/uj-logo-gold.png';
 
 // Floating rose & gold petals component
 export function FloatingPetals() {
@@ -47,9 +47,9 @@ export function FloatingPetals() {
             >
               <path
                 d="M12 2C7 5 4 10 6 16C8 22 16 22 18 16C20 10 17 5 12 2Z"
-                fill="#D9B2AE"
+                fill="#D98F82"
                 fillOpacity="0.85"
-                stroke="#E8D2CF"
+                stroke="#E6A69B"
                 strokeWidth="0.5"
               />
             </svg>
@@ -60,13 +60,13 @@ export function FloatingPetals() {
               height={petal.size * 0.9}
               viewBox="0 0 24 24"
               fill="none"
-              className="drop-shadow-sm opacity-70"
+              className="drop-shadow-sm opacity-80"
             >
               <path
                 d="M12 3C8 6 6 11 8 16C10 21 16 21 18 15C20 9 16 5 12 3Z"
-                fill="#D9BD8A"
-                fillOpacity="0.7"
-                stroke="#F4E8D3"
+                fill="#CBA14C"
+                fillOpacity="0.85"
+                stroke="#F4D48A"
                 strokeWidth="0.5"
               />
             </svg>
@@ -77,12 +77,12 @@ export function FloatingPetals() {
               height={petal.size * 0.8}
               viewBox="0 0 24 24"
               fill="none"
-              className="drop-shadow-sm opacity-60"
+              className="drop-shadow-sm opacity-70"
             >
               <path
                 d="M3 12C9 7 15 7 21 12C15 17 9 17 3 12Z"
-                fill="#A8B5A0"
-                fillOpacity="0.6"
+                fill="#2D7584"
+                fillOpacity="0.75"
               />
             </svg>
           )}
@@ -117,13 +117,13 @@ export function BotanicalCorner({ position = 'top-left', className = '' }) {
         />
         <path
           d="M12 12 C22 22, 35 25, 50 22 C38 30, 25 38, 12 12 Z"
-          fill="#A8B5A0"
-          fillOpacity="0.25"
-          stroke="#465448"
+          fill="#2D7584"
+          fillOpacity="0.35"
+          stroke="#CBA14C"
           strokeWidth="0.4"
-          strokeOpacity="0.4"
+          strokeOpacity="0.5"
         />
-        <circle cx="4" cy="4" r="2.5" fill="#D9BD8A" />
+        <circle cx="4" cy="4" r="2.5" fill="#CBA14C" />
       </svg>
     </div>
   );
@@ -136,7 +136,7 @@ export function MonogramCrest({ className = '' }) {
       <img
         src={ujLogo}
         alt="U & J Monogram"
-        className="w-32 h-32 md:w-48 md:h-48 object-contain"
+        className="w-32 h-32 md:w-48 md:h-48 object-contain drop-shadow-[0_4px_16px_rgba(203,161,76,0.35)]"
       />
     </div>
   );

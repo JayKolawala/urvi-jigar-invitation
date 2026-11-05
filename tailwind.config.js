@@ -7,42 +7,47 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Midnight Teal Royal Surfaces
         pearl: {
-          DEFAULT: '#FFFCF7',
-          light: '#FFFDFB',
-          dark: '#F5EFE6',
-          muted: '#EFE8DC',
+          DEFAULT: '#0A1E24',     // Deepest midnight teal canvas
+          light: '#112F38',       // Elevated palace card surface
+          dark: '#061418',        // Deepest vignette & footer shadow
+          muted: '#173E4A',       // Interactive pill & button background
         },
+        // Radiant Burnished Gold Accents & Foil
         gold: {
-          DEFAULT: '#D9BD8A',
-          light: '#F4E8D3',
-          lighter: '#FBF6EE',
-          dark: '#B89958',
-          deep: '#93773A',
+          DEFAULT: '#CBA14C',     // Primary burnished gold
+          light: '#F4D48A',       // Shimmering light gold
+          lighter: '#FDF2D6',     // Luminous gold glow
+          dark: '#E5BF67',        // Radiant warm gold (script, headings, highlights)
+          deep: '#F2CD74',        // Brilliant gold text
         },
+        // Soft Coral Rose & Golden Warmth
         rose: {
-          DEFAULT: '#D9B2AE',
-          light: '#F7ECEB',
-          dark: '#B58783',
+          DEFAULT: '#D98F82',
+          light: '#193A43',       // Ambient teal aura
+          dark: '#E6A69B',
         },
         'dusty-pink': {
-          DEFAULT: '#E8D2CF',
-          light: '#F4EAE8',
+          DEFAULT: '#C77E72',
+          light: '#15333B',
         },
+        // Palace Peacock Teal Accents
         sage: {
-          DEFAULT: '#A8B5A0',
-          light: '#E2E8DE',
-          muted: '#C4CDC0',
+          DEFAULT: '#2D7584',
+          light: '#439BAF',
+          muted: '#1B4752',
         },
         'deep-olive': {
-          DEFAULT: '#465448',
-          dark: '#2E392F',
-          light: '#5E7060',
+          DEFAULT: '#E5BF67',     // Uppercase tracking tags in burnished gold
+          dark: '#CBA14C',
+          light: '#F4D48A',
         },
+        // High-Contrast Alabaster & Ivory Typography
         charcoal: {
-          DEFAULT: '#393832',
-          light: '#626056',
-          muted: '#8C897E',
+          DEFAULT: '#FFFDF9',     // Pure Ivory for primary names & headings
+          light: '#E2ECE9',       // Clean, readable pale ivory for body text
+          muted: '#A5C1BC',       // Soft muted teal-grey for secondary details
         },
       },
       fontFamily: {
@@ -52,10 +57,10 @@ export default {
         sans: ['"DM Sans"', 'sans-serif'],
       },
       boxShadow: {
-        'luxury': '0 20px 45px -15px rgba(57, 56, 50, 0.08), 0 0 1px 1px rgba(217, 189, 138, 0.25)',
-        'luxury-hover': '0 25px 50px -12px rgba(57, 56, 50, 0.15), 0 0 1px 1px rgba(217, 189, 138, 0.4)',
-        'envelope': '0 25px 60px -15px rgba(70, 84, 72, 0.18), 0 0 0 1px rgba(217, 189, 138, 0.3)',
-        'card': '0 10px 30px -5px rgba(57, 56, 50, 0.06)',
+        'luxury': '0 20px 45px -15px rgba(3, 10, 12, 0.5), 0 0 1px 1px rgba(203, 161, 76, 0.35)',
+        'luxury-hover': '0 25px 50px -12px rgba(3, 10, 12, 0.7), 0 0 2px 1px rgba(203, 161, 76, 0.6)',
+        'envelope': '0 25px 60px -15px rgba(3, 10, 12, 0.6), 0 0 0 1px rgba(203, 161, 76, 0.4)',
+        'card': '0 10px 30px -5px rgba(3, 10, 12, 0.4)',
       },
       keyframes: {
         float: {

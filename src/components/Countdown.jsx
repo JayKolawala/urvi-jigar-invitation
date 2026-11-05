@@ -122,13 +122,13 @@ export default function Countdown() {
             {timeUnits.map((unit) => (
               <div
                 key={unit.label}
-                className="relative flex flex-col items-center justify-center py-3.5 px-1 sm:py-5 sm:px-3 rounded-xl sm:rounded-2xl bg-[#FFFDFB] border border-gold/40 shadow-sm transition-all duration-300"
+                className="relative flex flex-col items-center justify-center py-3.5 px-1 sm:py-5 sm:px-3 rounded-xl sm:rounded-2xl bg-pearl-light border-2 border-gold/40 shadow-card hover:border-gold transition-all duration-300"
               >
                 {/* Subtle ornamental corner dot */}
-                <div className="absolute top-1.5 left-1.5 w-1 h-1 rounded-full bg-gold/50" />
-                <div className="absolute top-1.5 right-1.5 w-1 h-1 rounded-full bg-gold/50" />
-                <div className="absolute bottom-1.5 left-1.5 w-1 h-1 rounded-full bg-gold/50" />
-                <div className="absolute bottom-1.5 right-1.5 w-1 h-1 rounded-full bg-gold/50" />
+                <div className="absolute top-1.5 left-1.5 w-1 h-1 rounded-full bg-gold/60" />
+                <div className="absolute top-1.5 right-1.5 w-1 h-1 rounded-full bg-gold/60" />
+                <div className="absolute bottom-1.5 left-1.5 w-1 h-1 rounded-full bg-gold/60" />
+                <div className="absolute bottom-1.5 right-1.5 w-1 h-1 rounded-full bg-gold/60" />
 
                 {/* Number Display with Pop Transition */}
                 <div className="h-10 sm:h-14 flex items-center justify-center overflow-hidden">
@@ -139,7 +139,7 @@ export default function Countdown() {
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: -15, opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="font-editorial text-2xl sm:text-4xl font-semibold text-charcoal"
+                      className="font-editorial text-2xl sm:text-4xl font-semibold text-gold-deep"
                     >
                       {String(unit.value).padStart(2, '0')}
                     </motion.span>
@@ -147,7 +147,7 @@ export default function Countdown() {
                 </div>
 
                 {/* Unit Label */}
-                <span className="font-sans text-[9px] sm:text-[11px] tracking-wider uppercase text-charcoal-light font-medium mt-0.5">
+                <span className="font-sans text-[9px] sm:text-[11px] tracking-wider uppercase text-charcoal-muted font-medium mt-0.5">
                   {unit.label}
                 </span>
               </div>
@@ -167,7 +167,7 @@ export default function Countdown() {
             href={getGoogleCalendarUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 min-h-[44px] px-4 sm:px-5 py-2.5 rounded-full bg-pearl-light border border-gold/50 shadow-sm hover:border-gold text-charcoal font-sans text-xs tracking-wider uppercase font-medium transition-all duration-300 active:scale-95"
+            className="inline-flex items-center justify-center gap-2 min-h-[44px] px-4 sm:px-5 py-2.5 rounded-full bg-pearl-muted border border-gold/50 shadow-sm hover:border-gold hover:bg-gold/15 text-charcoal font-sans text-xs tracking-wider uppercase font-medium transition-all duration-300 active:scale-95"
           >
             <CalendarPlus className="w-3.5 h-3.5 text-gold-dark" />
             <span>Google Calendar</span>
@@ -176,7 +176,7 @@ export default function Countdown() {
           <button
             onClick={downloadIcs}
             type="button"
-            className="inline-flex items-center justify-center gap-2 min-h-[44px] px-4 sm:px-5 py-2.5 rounded-full bg-pearl-light border border-gold/50 shadow-sm hover:border-gold text-charcoal font-sans text-xs tracking-wider uppercase font-medium transition-all duration-300 active:scale-95"
+            className="inline-flex items-center justify-center gap-2 min-h-[44px] px-4 sm:px-5 py-2.5 rounded-full bg-pearl-muted border border-gold/50 shadow-sm hover:border-gold hover:bg-gold/15 text-charcoal font-sans text-xs tracking-wider uppercase font-medium transition-all duration-300 active:scale-95"
           >
             <CalendarPlus className="w-3.5 h-3.5 text-gold-dark" />
             <span>Apple / iCal File</span>

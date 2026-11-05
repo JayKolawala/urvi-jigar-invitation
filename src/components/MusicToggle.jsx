@@ -169,16 +169,16 @@ export default function MusicToggle() {
         onClick={toggleMusic}
         type="button"
         aria-label={isPlaying ? "Mute romantic background melody" : "Play romantic background melody"}
-        className="group flex items-center gap-2 px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-full bg-pearl/95 backdrop-blur-md border border-gold/40 shadow-luxury hover:shadow-luxury-hover hover:border-gold transition-all duration-300 text-charcoal active:scale-95 cursor-pointer"
+        className="group flex items-center gap-2 px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-full bg-pearl-muted/95 backdrop-blur-md border border-gold/50 shadow-luxury hover:shadow-luxury-hover hover:border-gold transition-all duration-300 text-charcoal active:scale-95 cursor-pointer"
       >
         {isPlaying ? (
           <>
             {/* Animated Equalizer Bars */}
             <div className="flex items-end gap-[3px] h-3.5 w-3.5">
               <span className="w-[2.5px] bg-gold-dark rounded-full eq-bar-1"></span>
-              <span className="w-[2.5px] bg-rose-dark rounded-full eq-bar-2"></span>
+              <span className="w-[2.5px] bg-gold-light rounded-full eq-bar-2"></span>
               <span className="w-[2.5px] bg-gold-dark rounded-full eq-bar-3"></span>
-              <span className="w-[2.5px] bg-rose rounded-full eq-bar-4"></span>
+              <span className="w-[2.5px] bg-sage-light rounded-full eq-bar-4"></span>
             </div>
             <span className="text-[11px] sm:text-xs font-sans font-medium tracking-wider text-charcoal uppercase">
               Melody On
@@ -189,7 +189,7 @@ export default function MusicToggle() {
             <div className="relative">
               <Music className="w-3.5 h-3.5 text-gold-dark group-hover:scale-110 transition-transform" />
             </div>
-            <span className="text-[11px] sm:text-xs font-sans font-medium tracking-wider text-charcoal/80 uppercase">
+            <span className="text-[11px] sm:text-xs font-sans font-medium tracking-wider text-charcoal uppercase">
               Play Music
             </span>
           </>

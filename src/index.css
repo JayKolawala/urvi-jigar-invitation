@@ -4,14 +4,14 @@
 
 @layer base {
   :root {
-    --pearl: #FFFCF7;
-    --gold: #D9BD8A;
-    --gold-dark: #B89958;
-    --rose: #D9B2AE;
-    --dusty-pink: #E8D2CF;
-    --sage: #A8B5A0;
-    --deep-olive: #465448;
-    --charcoal: #393832;
+    --pearl: #0A1E24;
+    --gold: #CBA14C;
+    --gold-dark: #E5BF67;
+    --rose: #D98F82;
+    --dusty-pink: #C77E72;
+    --sage: #2D7584;
+    --deep-olive: #E5BF67;
+    --charcoal: #FFFDF9;
   }
 
   html {
@@ -21,11 +21,11 @@
   }
 
   body {
-    background-color: #FFFCF7;
+    background-color: #0A1E24;
     background-image: 
-      radial-gradient(circle at 15% 10%, rgba(217, 189, 138, 0.05) 0%, transparent 40%),
-      radial-gradient(circle at 85% 90%, rgba(217, 178, 174, 0.06) 0%, transparent 45%),
-      radial-gradient(circle at 50% 50%, rgba(168, 181, 160, 0.04) 0%, transparent 60%);
+      radial-gradient(circle at 15% 10%, rgba(203, 161, 76, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(45, 117, 132, 0.18) 0%, transparent 45%),
+      radial-gradient(circle at 50% 50%, rgba(20, 52, 60, 0.3) 0%, transparent 60%);
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -35,23 +35,23 @@
     width: 7px;
   }
   ::-webkit-scrollbar-track {
-    background: #FAF6EE;
+    background: #061418;
   }
   ::-webkit-scrollbar-thumb {
-    background: #D9BD8A;
+    background: #CBA14C;
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #B89958;
+    background: #E5BF67;
   }
 }
 
 /* Paper texture simulation */
 .bg-paper {
-  background-color: #FFFCF7;
+  background-color: #0A1E24;
   background-image: 
-    radial-gradient(#d9bd8a 0.6px, transparent 0.6px), 
-    radial-gradient(#d9b2ae 0.6px, #fffcf7 0.6px);
+    radial-gradient(#CBA14C 0.6px, transparent 0.6px), 
+    radial-gradient(#2D7584 0.6px, #0A1E24 0.6px);
   background-size: 28px 28px;
   background-position: 0 0, 14px 14px;
   background-opacity: 0.15;
@@ -59,13 +59,13 @@
 
 /* Gold shimmer effect */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #A7843B 0%, #D9BD8A 50%, #C4A25C 100%);
+  background: linear-gradient(135deg, #B58A32 0%, #F4D48A 50%, #CBA14C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gold-foil {
-  background: linear-gradient(110deg, #9C7830 0%, #E3CDA0 25%, #C29F55 50%, #F5E8D0 75%, #A68239 100%);
+  background: linear-gradient(110deg, #A47B25 0%, #F9E2A8 25%, #CBA14C 50%, #FFF2D6 75%, #B58A32 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -80,22 +80,22 @@
 
 /* Luxury border styles */
 .border-gold-frame {
-  border: 1px solid rgba(217, 189, 138, 0.5);
+  border: 1px solid rgba(203, 161, 76, 0.5);
   position: relative;
 }
 
 .border-gold-double {
-  border: 1px solid rgba(217, 189, 138, 0.6);
-  outline: 1px solid rgba(217, 189, 138, 0.3);
+  border: 1px solid rgba(203, 161, 76, 0.6);
+  outline: 1px solid rgba(203, 161, 76, 0.3);
   outline-offset: 6px;
 }
 
 /* Deckle edge paper effect */
 .deckle-card {
   box-shadow: 
-    0 1px 3px rgba(57, 56, 50, 0.05),
-    0 10px 30px -5px rgba(57, 56, 50, 0.08),
-    0 0 0 1px rgba(217, 189, 138, 0.25);
+    0 1px 3px rgba(3, 10, 12, 0.3),
+    0 10px 30px -5px rgba(3, 10, 12, 0.5),
+    0 0 0 1px rgba(203, 161, 76, 0.35);
 }
 
 /* Envelope 3D styling */

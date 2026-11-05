@@ -29,7 +29,7 @@ export default function SectionDivider({ className = '' }) {
             stroke="currentColor" 
             strokeWidth="0.8"
           />
-          <circle cx="12" cy="12" r="2.5" fill="#D9BD8A" />
+          <circle cx="12" cy="12" r="2.5" fill="#CBA14C" />
         </svg>
       </motion.div>
 

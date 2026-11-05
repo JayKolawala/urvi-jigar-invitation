@@ -7,7 +7,7 @@ export default function InvitationSection() {
   return (
     <section id="invitation" className="relative py-16 md:py-24 px-4 sm:px-6 overflow-hidden">
       {/* Background ambient blush */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-rose-light/40 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-rose-light/50 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-3xl mx-auto">
         <motion.div
@@ -15,11 +15,11 @@ export default function InvitationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="relative bg-[#FFFDFB] rounded-2xl p-7 sm:p-10 md:p-14 shadow-luxury border-2 border-gold/40 text-center deckle-card"
+          className="relative bg-pearl-light rounded-2xl p-7 sm:p-10 md:p-14 shadow-luxury border-2 border-gold/50 text-center deckle-card"
         >
           {/* Inner Decorative Double Border Inset */}
-          <div className="absolute inset-2.5 sm:inset-3.5 border border-gold/30 rounded-xl pointer-events-none" />
-          <div className="absolute inset-4 sm:inset-5 border border-gold/15 rounded-lg pointer-events-none" />
+          <div className="absolute inset-2.5 sm:inset-3.5 border border-gold/40 rounded-xl pointer-events-none" />
+          <div className="absolute inset-4 sm:inset-5 border border-gold/20 rounded-lg pointer-events-none" />
 
           {/* Top Ornamental Monogram Emblem */}
           <div className="">
@@ -33,7 +33,7 @@ export default function InvitationSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.7 }}
           >
-            <h2 className="font-editorial text-sm sm:text-base md:text-lg tracking-[0.3em] uppercase text-deep-olive font-semibold">
+            <h2 className="font-editorial text-sm sm:text-base md:text-lg tracking-[0.3em] uppercase text-gold-deep font-semibold">
               A Beautiful Beginning
             </h2>
           </motion.div>
@@ -58,7 +58,7 @@ export default function InvitationSection() {
               <p className="font-editorial text-sm sm:text-base md:text-lg tracking-[0.2em] uppercase text-charcoal font-bold">
                 Jagruti Kolawala <br /> Satish Kolawala
               </p>
-              <p className="font-editorial text-[10px] sm:text-xs tracking-[0.22em] uppercase text-deep-olive font-semibold mt-1">
+              <p className="font-editorial text-[10px] sm:text-xs tracking-[0.22em] uppercase text-gold-deep font-semibold mt-1">
                 &amp; Family
               </p>
             </div>
@@ -70,11 +70,11 @@ export default function InvitationSection() {
             {/* Couple Names */}
             <div className="py-2">
               <h3 className="font-cormorant text-4xl sm:text-5xl md:text-6xl font-normal text-charcoal tracking-tight">
-                <span className="text-charcoal hover:text-gold-dark transition-colors">Urvi</span>
+                <span className="text-charcoal hover:text-gold-light transition-colors">Urvi</span>
                 <span className="font-script text-2xl sm:text-3xl md:text-4xl text-gold-dark mx-2 sm:mx-3 inline-block">
                   &amp;
                 </span>
-                <span className="text-charcoal hover:text-gold-dark transition-colors">Jigar</span>
+                <span className="text-charcoal hover:text-gold-light transition-colors">Jigar</span>
               </h3>
             </div>
 
@@ -101,7 +101,6 @@ export default function InvitationSection() {
             <p className="font-editorial text-sm sm:text-base tracking-[0.2em] uppercase text-charcoal font-semibold mt-2">
               Jagruti Kolawala <br /> Satish Kolawala &amp; Family
             </p>
-
           </motion.div>
         </motion.div>
       </div>

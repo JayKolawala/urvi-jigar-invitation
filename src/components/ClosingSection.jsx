@@ -33,7 +33,7 @@ export default function ClosingSection({ onReplayInvitation }) {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="font-editorial text-[11px] sm:text-xs md:text-sm tracking-[0.28em] uppercase text-deep-olive font-semibold">
+          <h2 className="font-editorial text-[11px] sm:text-xs md:text-sm tracking-[0.28em] uppercase text-gold-deep font-semibold">
             We Would Love To Celebrate With You
           </h2>
         </motion.div>
@@ -82,7 +82,6 @@ export default function ClosingSection({ onReplayInvitation }) {
           <p className="font-editorial text-xs sm:text-sm md:text-base tracking-[0.2em] uppercase text-charcoal font-semibold mt-1.5">
             Jagruti Kolawala <br /> Satish Kolawala <br />&amp; Family
           </p>
-
         </motion.div>
 
         {/* Replay Envelope Call-to-action */}
@@ -97,7 +96,7 @@ export default function ClosingSection({ onReplayInvitation }) {
             <button
               onClick={onReplayInvitation}
               type="button"
-              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full bg-pearl border border-gold/40 shadow-sm hover:border-gold hover:shadow-md text-charcoal-light hover:text-charcoal font-editorial text-[10px] sm:text-xs tracking-[0.2em] uppercase transition-all duration-300 active:scale-95 cursor-pointer"
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full bg-pearl-muted border border-gold/50 shadow-sm hover:border-gold hover:bg-gold/15 text-charcoal hover:text-white font-editorial text-[10px] sm:text-xs tracking-[0.2em] uppercase transition-all duration-300 active:scale-95 cursor-pointer"
             >
               <Mail className="w-3.5 h-3.5 text-gold-dark" />
               <span>Replay Invitation Opening</span>
@@ -111,7 +110,7 @@ export default function ClosingSection({ onReplayInvitation }) {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.75, duration: 0.7 }}
-          className="mt-10 sm:mt-12 pt-6 border-t border-gold/20 w-full flex flex-col items-center"
+          className="mt-10 sm:mt-12 pt-6 border-t border-gold/30 w-full flex flex-col items-center"
         >
           <span className="font-script text-2xl sm:text-3xl text-gold-dark block">
             Thank You
@@ -125,7 +124,7 @@ export default function ClosingSection({ onReplayInvitation }) {
               href="https://jaykolawala.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gold-deep hover:text-gold-dark font-medium underline underline-offset-4 decoration-gold/40 hover:decoration-gold transition-colors duration-200"
+              className="text-gold-deep hover:text-gold-light font-medium underline underline-offset-4 decoration-gold/40 hover:decoration-gold transition-colors duration-200"
             >
               Jay Kolawala
             </a>

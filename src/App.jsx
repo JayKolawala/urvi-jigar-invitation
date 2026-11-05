@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ujLogo from './assets/uj-logo.png';
+import ujLogo from './assets/uj-logo-gold.png';
 import InvitationOpening from './components/InvitationOpening';
 import HeroSection from './components/HeroSection';
 import InvitationSection from './components/InvitationSection';
@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-paper text-charcoal selection:bg-rose-light selection:text-charcoal overflow-x-hidden w-full max-w-full">
+    <div className="relative min-h-screen bg-paper text-charcoal selection:bg-gold/30 selection:text-white overflow-x-hidden w-full max-w-full">
       {/* Floating Petals gentle animation layer across the entire page */}
       <FloatingPetals />
 
@@ -39,7 +39,7 @@ function App() {
       )}
 
       {/* Luxury Sticky Header - Centered Logo Only */}
-      <header className="sticky top-0 z-30 w-full bg-pearl/90 backdrop-blur-md border-b border-gold/20 transition-all duration-300">
+      <header className="sticky top-0 z-30 w-full bg-pearl-dark/90 backdrop-blur-md border-b border-gold/30 transition-all duration-300">
         <div className="max-w-5xl mx-auto h-12 sm:h-14 flex items-center justify-center">
           <a
             href="#hero"
@@ -48,7 +48,7 @@ function App() {
             <img
               src={ujLogo}
               alt="Urvi & Jigar Monogram"
-              className="h-9 sm:h-10 w-auto object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
+              className="h-9 sm:h-10 w-auto object-contain drop-shadow-[0_2px_8px_rgba(203,161,76,0.4)] transition-transform duration-300 group-hover:scale-105"
             />
           </a>
         </div>

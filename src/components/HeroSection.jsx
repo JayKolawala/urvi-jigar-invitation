@@ -38,7 +38,7 @@ export default function HeroSection() {
       <BotanicalCorner position="bottom-right" className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4" />
 
       {/* Subtle background ambient watercolor gradient */}
-      <div className="absolute inset-0 pointer-events-none -z-10 bg-[radial-gradient(circle_at_50%_40%,rgba(217,189,138,0.12)_0%,rgba(232,210,207,0.08)_45%,transparent_75%)]" />
+      <div className="absolute inset-0 pointer-events-none -z-10 bg-[radial-gradient(circle_at_50%_40%,rgba(203,161,76,0.18)_0%,rgba(45,117,132,0.15)_45%,transparent_75%)]" />
 
       {/* Main Content Container */}
       <motion.div
@@ -49,7 +49,7 @@ export default function HeroSection() {
       >
         {/* Top Tagline */}
         <motion.div variants={itemVariants} className="mb-2 sm:mb-4">
-          <span className="inline-block px-3.5 py-1 rounded-full border border-gold/40 bg-pearl-light/90 backdrop-blur-sm font-editorial text-[9px] sm:text-xs tracking-[0.28em] uppercase text-deep-olive font-medium shadow-sm">
+          <span className="inline-block px-3.5 py-1 rounded-full border border-gold/50 bg-pearl-light/90 backdrop-blur-sm font-editorial text-[9px] sm:text-xs tracking-[0.28em] uppercase text-gold-deep font-semibold shadow-sm">
             The Beginning of Forever
           </span>
         </motion.div>
@@ -67,7 +67,7 @@ export default function HeroSection() {
             <img 
               src={botanicalTopImg} 
               alt="Watercolor floral arch crown" 
-              className="w-full h-auto object-contain mx-auto mix-blend-multiply opacity-95 drop-shadow-sm"
+              className="w-full h-auto object-contain mx-auto drop-shadow-[0_4px_16px_rgba(0,0,0,0.35)] opacity-95"
             />
           </motion.div>
 
@@ -77,13 +77,13 @@ export default function HeroSection() {
               variants={itemVariants}
               className="font-cormorant font-normal tracking-tight text-charcoal leading-[1.05]"
             >
-              <span className="block text-4xl sm:text-6xl md:text-7xl hover:text-gold-dark transition-colors duration-300">
+              <span className="block text-4xl sm:text-6xl md:text-7xl hover:text-gold-light transition-colors duration-300">
                 Urvi
               </span>
               <span className="block font-script text-2xl sm:text-4xl md:text-5xl text-gold-dark my-1 sm:my-2 font-normal">
                 &amp;
               </span>
-              <span className="block text-4xl sm:text-6xl md:text-7xl hover:text-gold-dark transition-colors duration-300">
+              <span className="block text-4xl sm:text-6xl md:text-7xl hover:text-gold-light transition-colors duration-300">
                 Jigar
               </span>
             </motion.h1>
@@ -99,7 +99,7 @@ export default function HeroSection() {
             <img 
               src={botanicalBottomImg} 
               alt="Watercolor floral arch garland" 
-              className="w-full h-auto object-contain mx-auto mix-blend-multiply opacity-95 drop-shadow-sm"
+              className="w-full h-auto object-contain mx-auto drop-shadow-[0_4px_16px_rgba(0,0,0,0.35)] opacity-95"
             />
           </motion.div>
         </div>

@@ -24,7 +24,7 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
         particleCount: 50,
         spread: 65,
         origin: { y: 0.58 },
-        colors: ['#D9BD8A', '#D9B2AE', '#E8D2CF', '#FFFCF7', '#B89958'],
+        colors: ['#CBA14C', '#F4D48A', '#2D7584', '#FFFDF9', '#E5BF67'],
         disableForReducedMotion: true,
       });
     } catch {
@@ -111,11 +111,11 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                 y: stage === 'revealed' ? -8 : 0
               }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="relative w-full h-full rounded-lg shadow-xl bg-[#F7F2E8] border border-gold/40 preserve-3d"
+              className="relative w-full h-full rounded-lg shadow-2xl bg-[#0D242B] border-2 border-gold/50 preserve-3d"
             >
               {/* Envelope Interior Lining */}
-              <div className="absolute inset-1.5 sm:inset-2 rounded bg-gradient-to-b from-[#F2ECE1] to-[#FAF7F0] border border-gold/30 overflow-hidden">
-                <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#D9BD8A_1px,transparent_1px)] [background-size:16px_16px]" />
+              <div className="absolute inset-1.5 sm:inset-2 rounded bg-gradient-to-b from-[#08191E] to-[#112F38] border border-gold/30 overflow-hidden">
+                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#CBA14C_1px,transparent_1px)] [background-size:16px_16px]" />
               </div>
 
               {/* Emerging Invitation Letter Card */}
@@ -136,16 +136,16 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                   duration: 1.0,
                   ease: [0.16, 1, 0.3, 1]
                 }}
-                className="absolute inset-x-2.5 sm:inset-x-4 top-2 bottom-2 bg-[#FFFCF7] rounded-md shadow-2xl border-2 border-gold/60 p-3 sm:p-5 flex flex-col items-center justify-between text-center deckle-card"
+                className="absolute inset-x-2.5 sm:inset-x-4 top-2 bottom-2 bg-pearl-light rounded-md shadow-2xl border-2 border-gold/60 p-3 sm:p-5 flex flex-col items-center justify-between text-center deckle-card"
               >
                 {/* Gold Frame Inset */}
-                <div className="absolute inset-1.5 border border-gold/30 rounded pointer-events-none" />
+                <div className="absolute inset-1.5 border border-gold/40 rounded pointer-events-none" />
 
                 <div className="pt-0.5">
                   <span className="font-script text-gold-dark text-lg sm:text-2xl tracking-wide block">
                     Save our Date
                   </span>
-                  <span className="font-editorial text-[8px] sm:text-[10px] tracking-[0.25em] text-deep-olive uppercase block">
+                  <span className="font-editorial text-[8px] sm:text-[10px] tracking-[0.25em] text-gold-deep uppercase block">
                     Engagement Ceremony
                   </span>
                 </div>
@@ -192,26 +192,26 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
               {/* Envelope Pocket (Front Face: Left, Right, Bottom Flaps) */}
               <div className="absolute inset-0 pointer-events-none z-20 overflow-hidden rounded-lg">
                 <div
-                  className="absolute inset-0 bg-[#FAF6EE]"
+                  className="absolute inset-0 bg-[#0E2830]"
                   style={{
                     clipPath: 'polygon(0 0, 48% 52%, 0 100%)',
-                    filter: 'drop-shadow(2px 0 3px rgba(57,56,50,0.04))',
+                    filter: 'drop-shadow(2px 0 4px rgba(3,10,12,0.4))',
                   }}
                 />
 
                 <div
-                  className="absolute inset-0 bg-[#F8F4EA]"
+                  className="absolute inset-0 bg-[#112E37]"
                   style={{
                     clipPath: 'polygon(100% 0, 52% 52%, 100% 100%)',
-                    filter: 'drop-shadow(-2px 0 3px rgba(57,56,50,0.04))',
+                    filter: 'drop-shadow(-2px 0 4px rgba(3,10,12,0.4))',
                   }}
                 />
 
                 <div
-                  className="absolute inset-0 bg-[#FFFDF9] border-b border-gold/30"
+                  className="absolute inset-0 bg-[#143640] border-b border-gold/40"
                   style={{
                     clipPath: 'polygon(0 100%, 50% 48%, 100% 100%)',
-                    filter: 'drop-shadow(0 -3px 4px rgba(57,56,50,0.05))',
+                    filter: 'drop-shadow(0 -3px 6px rgba(3,10,12,0.5))',
                   }}
                 />
               </div>
@@ -232,16 +232,16 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                   className="absolute inset-0 backface-hidden"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 50% 55%)',
-                    backgroundColor: '#FCFAF5',
-                    filter: 'drop-shadow(0 4px 6px rgba(57,56,50,0.08))',
+                    backgroundColor: '#163B45',
+                    filter: 'drop-shadow(0 4px 8px rgba(3,10,12,0.5))',
                   }}
                 >
                   <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon
                       points="0,0 100,0 50,55"
-                      fill="#FCFAF5"
-                      stroke="#D9BD8A"
-                      strokeWidth="0.6"
+                      fill="#163B45"
+                      stroke="#CBA14C"
+                      strokeWidth="0.8"
                     />
                   </svg>
                 </div>
@@ -251,7 +251,7 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                   className="absolute inset-0"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 50% 55%)',
-                    backgroundColor: '#F5EFE4',
+                    backgroundColor: '#0D242B',
                     transform: 'rotateX(180deg)',
                     backfaceVisibility: 'hidden',
                   }}
@@ -259,9 +259,9 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                   <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon
                       points="0,0 100,0 50,55"
-                      fill="#F5EFE4"
-                      stroke="#D9BD8A"
-                      strokeWidth="0.5"
+                      fill="#0D242B"
+                      stroke="#CBA14C"
+                      strokeWidth="0.7"
                     />
                   </svg>
                 </div>
@@ -312,7 +312,7 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                 whileTap={{ scale: 0.96 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
                 type="button"
-                className="w-full max-w-[280px] py-3.5 rounded-full bg-gradient-to-r from-gold-dark via-gold to-gold-dark text-pearl font-editorial text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase shadow-lg hover:shadow-xl transition-all duration-300 border border-gold-light/40 flex items-center justify-center gap-2 group cursor-pointer active:scale-95"
+                className="w-full max-w-[280px] py-3.5 rounded-full bg-gradient-to-r from-gold-deep via-gold to-gold-dark text-pearl-dark font-editorial text-xs sm:text-sm font-bold tracking-[0.2em] uppercase shadow-lg hover:shadow-luxury transition-all duration-300 border border-gold-light/40 flex items-center justify-center gap-2 group cursor-pointer active:scale-95"
               >
                 <span>OPEN INVITATION</span>
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
@@ -326,7 +326,7 @@ export default function InvitationOpening({ onOpenComplete, isOpen, onReplay }) 
                 <button
                   onClick={handleSkip}
                   type="button"
-                  className="w-full py-2.5 rounded-full bg-pearl border border-gold/50 shadow-sm text-xs font-editorial uppercase tracking-[0.18em] text-gold-deep hover:text-charcoal transition-all active:scale-95 cursor-pointer"
+                  className="w-full py-2.5 rounded-full bg-pearl-muted border border-gold/50 shadow-sm text-xs font-editorial uppercase tracking-[0.18em] text-gold-deep hover:text-white transition-all active:scale-95 cursor-pointer"
                 >
                   Enter Ceremony Details &rarr;
                 </button>

@@ -66,25 +66,25 @@ export default function EventDetails() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1, duration: 0.6 }}
                 className={`relative flex flex-col items-center justify-between p-6 sm:p-8 rounded-2xl transition-all duration-300 text-center ${card.highlight
-                  ? 'bg-[#FFFDF9] border-2 border-gold shadow-luxury order-first md:order-last'
-                  : 'bg-[#FFFCF7] border border-gold/40 shadow-card hover:shadow-luxury'
+                  ? 'bg-pearl-light border-2 border-gold shadow-luxury order-first md:order-last'
+                  : 'bg-pearl border border-gold/40 shadow-card hover:border-gold/70 hover:shadow-luxury'
                   }`}
               >
                 {/* Decorative border inset */}
-                <div className="absolute inset-2 border border-gold/20 rounded-xl pointer-events-none" />
+                <div className="absolute inset-2 border border-gold/30 rounded-xl pointer-events-none" />
 
                 {/* Card Icon Header */}
                 <div className="flex flex-col items-center w-full">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-pearl-dark border border-gold/40 flex items-center justify-center text-gold-dark mb-3 sm:mb-4 shadow-sm">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-pearl-muted border border-gold/40 flex items-center justify-center text-gold-deep mb-3 sm:mb-4 shadow-sm">
                     <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-gold-deep" />
                   </div>
 
-                  <span className="font-editorial text-[10px] sm:text-xs tracking-[0.25em] uppercase text-deep-olive font-bold mb-2">
+                  <span className="font-editorial text-[10px] sm:text-xs tracking-[0.25em] uppercase text-gold-deep font-bold mb-2">
                     {card.title}
                   </span>
 
                   <h3
-                    className={`font-cormorant text-charcoal font-semibold mb-2 leading-snug ${card.highlight ? 'text-2xl sm:text-3xl text-gold-deep' : 'text-xl sm:text-2xl'
+                    className={`font-cormorant font-semibold mb-2 leading-snug ${card.highlight ? 'text-2xl sm:text-3xl text-gold-deep' : 'text-xl sm:text-2xl text-charcoal'
                       }`}
                   >
                     {card.primary}
@@ -103,7 +103,7 @@ export default function EventDetails() {
                       href={directionsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 w-full min-h-[48px] px-5 py-3 rounded-full bg-gradient-to-r from-gold-dark via-gold to-gold-dark text-pearl font-editorial text-xs tracking-[0.2em] uppercase font-semibold shadow-md hover:shadow-lg transition-all duration-300 active:scale-95 group"
+                      className="inline-flex items-center justify-center gap-2 w-full min-h-[48px] px-5 py-3 rounded-full bg-gradient-to-r from-gold-deep via-gold to-gold-dark text-pearl-dark font-editorial text-xs tracking-[0.2em] uppercase font-bold shadow-md hover:shadow-luxury transition-all duration-300 active:scale-95 group"
                     >
                       <Navigation className="w-4 h-4 group-hover:rotate-45 transition-transform" />
                       <span>GET DIRECTIONS</span>
