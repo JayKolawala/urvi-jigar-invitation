@@ -119,6 +119,17 @@ export default function ClosingSection({ onReplayInvitation }) {
           <p className="text-[10px] sm:text-[11px] font-sans text-charcoal-muted tracking-widest uppercase mt-1.5">
             Urvi &amp; Jigar &bull; Engagement Ceremony &bull; 21 November 2026
           </p>
+          <p className="text-[10px] sm:text-[11px] font-sans text-charcoal-muted tracking-wider mt-3">
+            Developed by{' '}
+            <a
+              href="https://jaykolawala.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold-deep hover:text-gold-dark font-medium underline underline-offset-4 decoration-gold/40 hover:decoration-gold transition-colors duration-200"
+            >
+              Jay Kolawala
+            </a>
+          </p>
         </motion.div>
       </div>
     </footer>
