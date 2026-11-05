@@ -99,7 +99,7 @@ export default function InvitationSection() {
               With love &amp; blessings,
             </span>
             <p className="font-editorial text-sm sm:text-base tracking-[0.2em] uppercase text-charcoal font-semibold mt-2">
-              Jagruti Kolawala &amp; Satish Kolawala &amp; Family
+              Jagruti Kolawala <br /> Satish Kolawala &amp; Family
             </p>
 
           </motion.div>
