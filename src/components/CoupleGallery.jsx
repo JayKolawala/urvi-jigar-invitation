@@ -73,7 +73,7 @@ export default function CoupleGallery() {
   };
 
   return (
-    <section id="gallery" className="relative py-20 sm:py-28 px-4 sm:px-6 overflow-hidden">
+    <section id="gallery" className="relative py-20 sm:py-28 px-4 sm:px-6 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[550px] h-[550px] bg-sage/10 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-10 left-10 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none -z-10" />

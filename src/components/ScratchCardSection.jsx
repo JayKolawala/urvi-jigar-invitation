@@ -6,7 +6,7 @@ import ScratchCard from './ScratchCard';
 
 export default function ScratchCardSection() {
   return (
-    <section id="surprises" className="relative py-20 sm:py-28 px-4 sm:px-6 overflow-hidden">
+    <section id="surprises" className="relative py-20 sm:py-28 px-4 sm:px-6 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-gold/10 rounded-full blur-3xl pointer-events-none -z-10" />
 

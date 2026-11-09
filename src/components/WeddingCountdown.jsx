@@ -70,7 +70,7 @@ export default function WeddingCountdown() {
   ];
 
   return (
-    <section id="countdown" className="relative py-20 sm:py-28 px-4 sm:px-6 overflow-hidden text-center">
+    <section id="countdown" className="relative py-20 sm:py-28 px-4 sm:px-6 overflow-hidden text-center scroll-mt-16 sm:scroll-mt-20">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/15 rounded-full blur-3xl pointer-events-none -z-10" />
 

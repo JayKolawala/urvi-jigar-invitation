@@ -177,7 +177,7 @@ export default function WeddingTimeline() {
   const [activeMapVenue, setActiveMapVenue] = useState(null);
 
   return (
-    <section id="celebrations" className="relative py-16 sm:py-24 px-4 sm:px-6 overflow-hidden">
+    <section id="celebrations" className="relative py-16 sm:py-24 px-4 sm:px-6 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 right-5 w-80 h-80 bg-gold-light/10 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 left-5 w-96 h-96 bg-sage/10 rounded-full blur-3xl pointer-events-none -z-10" />

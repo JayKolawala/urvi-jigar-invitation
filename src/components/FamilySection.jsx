@@ -39,7 +39,7 @@ const mosadPaksh = {
 
 export default function FamilySection() {
   return (
-    <section id="family" className="relative py-20 sm:py-28 px-4 sm:px-6 overflow-hidden">
+    <section id="family" className="relative py-20 sm:py-28 px-4 sm:px-6 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-gold-light/10 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-sage/10 rounded-full blur-3xl pointer-events-none -z-10" />

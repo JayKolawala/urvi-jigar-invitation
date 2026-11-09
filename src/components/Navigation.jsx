@@ -20,28 +20,53 @@ export default function Navigation() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
 
-      const sections = navLinks.map(link => link.href.substring(1));
-      const scrollPos = window.scrollY + 120;
+      // 1. If at top of the page, activate home
+      if (window.scrollY < 120) {
+        setActiveSection('hero');
+        return;
+      }
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el && el.offsetTop <= scrollPos) {
-          setActiveSection(sections[i]);
-          break;
+      // 2. If at bottom of the page, activate countdown
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80) {
+        setActiveSection(navLinks[navLinks.length - 1].href.substring(1));
+        return;
+      }
+
+      // 3. Scan sections from bottom to top using getBoundingClientRect
+      const triggerThreshold = window.innerHeight * 0.35;
+
+      for (let i = navLinks.length - 1; i >= 0; i--) {
+        const id = navLinks[i].href.substring(1);
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= triggerThreshold) {
+            setActiveSection(id);
+            break;
+          }
         }
       }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setIsOpen(false);
+    const id = href.substring(1);
+    setActiveSection(id);
     const target = document.querySelector(href);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      const headerOffset = 64;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
     }
   };
 
