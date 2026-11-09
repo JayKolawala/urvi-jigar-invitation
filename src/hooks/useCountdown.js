@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 
-// Target: Saturday, 21 November 2026, 10:00 AM IST (Asia/Kolkata, UTC+5:30)
-const TARGET_DATE_STRING = "2026-11-21T10:00:00+05:30";
+// Wedding Ceremony Target: Tuesday, 2 February 2027, 7:00 PM IST (Asia/Kolkata, UTC+5:30)
+const DEFAULT_TARGET_DATE = "2027-02-02T19:00:00+05:30";
 
-export function useCountdown() {
-  const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft());
+export function useCountdown(targetDateString = DEFAULT_TARGET_DATE) {
+  const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft(targetDateString));
 
-  function calculateTimeLeft() {
-    const target = new Date(TARGET_DATE_STRING).getTime();
+  function calculateTimeLeft(dateString) {
+    const target = new Date(dateString).getTime();
     const now = new Date().getTime();
     const difference = target - now;
 
     if (difference <= 0) {
-      // Check if it's the day of the event (within 14 hours) or completely passed
+      // Event day or passed (active during the 14-hour ceremony & reception)
       const eventDuration = 14 * 60 * 60 * 1000;
       if (Math.abs(difference) <= eventDuration) {
         return {
@@ -51,11 +51,11 @@ export function useCountdown() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+      setTimeLeft(calculateTimeLeft(targetDateString));
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDateString]);
 
   return timeLeft;
 }

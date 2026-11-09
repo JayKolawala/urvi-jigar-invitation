@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import ujLogo from './assets/uj-logo-gold.png';
-import InvitationOpening from './components/InvitationOpening';
-import HeroSection from './components/HeroSection';
-import InvitationSection from './components/InvitationSection';
-import Countdown from './components/Countdown';
-import EventDetails from './components/EventDetails';
-import ClosingSection from './components/ClosingSection';
+import Navigation from './components/Navigation';
+import WeddingOpening from './components/WeddingOpening';
+import WeddingHero from './components/WeddingHero';
+import CoupleGallery from './components/CoupleGallery';
+import ScratchCardSection from './components/ScratchCardSection';
+import WeddingTimeline from './components/WeddingTimeline';
+import WeddingCountdown from './components/WeddingCountdown';
+import FamilySection from './components/FamilySection';
+import WeddingClosing from './components/WeddingClosing';
 import MusicToggle from './components/MusicToggle';
 import { FloatingPetals } from './components/FloralDecorations';
 
@@ -31,45 +33,38 @@ function App() {
 
       {/* Interactive Envelope Opening Sequence Overlay */}
       {!isInvitationOpen && (
-        <InvitationOpening
+        <WeddingOpening
           isOpen={isInvitationOpen}
           onOpenComplete={handleOpenComplete}
           onReplay={handleReplayInvitation}
         />
       )}
 
-      {/* Luxury Sticky Header - Centered Logo Only */}
-      <header className="sticky top-0 z-30 w-full bg-pearl-dark/90 backdrop-blur-md border-b border-gold/30 transition-all duration-300">
-        <div className="max-w-5xl mx-auto h-12 sm:h-14 flex items-center justify-center">
-          <a
-            href="#hero"
-            className="flex items-center justify-center group py-1"
-          >
-            <img
-              src={ujLogo}
-              alt="Urvi & Jigar Monogram"
-              className="h-9 sm:h-10 w-auto object-contain drop-shadow-[0_2px_8px_rgba(203,161,76,0.4)] transition-transform duration-300 group-hover:scale-105"
-            />
-          </a>
-        </div>
-      </header>
+      {/* Luxury Sticky Navigation Header */}
+      <Navigation />
 
       {/* Main Page Scroll Flow */}
-      <main className="relative w-full max-w-full overflow-x-hidden">
-        {/* Section 2: Hero Section */}
-        <HeroSection />
+      <main className="relative w-full max-w-full overflow-x-hidden pt-12 sm:pt-16">
+        {/* Section 1: Hero Wedding Announcement */}
+        <WeddingHero />
 
-        {/* Section 3: Our Special Invitation */}
-        <InvitationSection />
+        {/* Section 2: Interactive Scratch Card Experience */}
+        <ScratchCardSection />
 
-        {/* Section 4: Live Countdown Timer */}
-        <Countdown />
+        {/* Section 3: Three-Day Celebration Timeline */}
+        <WeddingTimeline />
 
-        {/* Section 5: Event Details & Directions */}
-        <EventDetails />
+        {/* Section 4: Our Beloved Family (Kolawala Family & Mosad Paksh) */}
+        <FamilySection />
 
-        {/* Section 6: Closing & Family Blessings */}
-        <ClosingSection onReplayInvitation={handleReplayInvitation} />
+        {/* Section 5: Couple Photography Gallery */}
+        <CoupleGallery />
+
+        {/* Section 6: Live Wedding Countdown Timer */}
+        <WeddingCountdown />
+
+        {/* Section 7: Family Blessings & Closing */}
+        <WeddingClosing onReplayInvitation={handleReplayInvitation} />
       </main>
     </div>
   );

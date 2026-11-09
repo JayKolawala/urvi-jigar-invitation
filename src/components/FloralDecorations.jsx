@@ -141,3 +141,60 @@ export function MonogramCrest({ className = '' }) {
     </div>
   );
 }
+
+// Tasteful Traditional Lord Ganesha Auspicious Motif
+export function GaneshMotif({ className = 'w-10 h-10' }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
+      {/* Outer sacred circle */}
+      <circle cx="50" cy="50" r="46" stroke="#CBA14C" strokeWidth="1.2" strokeDasharray="3 2" />
+      <circle cx="50" cy="50" r="41" stroke="#CBA14C" strokeWidth="0.8" strokeOpacity="0.5" />
+      
+      {/* Crown / Mukut */}
+      <path d="M42 24 L50 14 L58 24 Z" fill="#CBA14C" fillOpacity="0.4" stroke="#CBA14C" strokeWidth="1.2" />
+      <circle cx="50" cy="18" r="2.5" fill="#F4D48A" />
+
+      {/* Head & Trunk Silhouette */}
+      <path
+        d="M36 34 C36 27, 44 26, 50 26 C56 26, 64 27, 64 34 C64 42, 59 48, 54 53 C51 56, 51 64, 53 70 C54 73, 58 74, 60 71 C62 68, 62 65, 60 63"
+        stroke="#CBA14C"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+      />
+
+      {/* Tilak / Trishul mark */}
+      <path d="M47 31 L50 27 L53 31" stroke="#F4D48A" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="50" cy="34" r="1.5" fill="#D98F82" />
+
+      {/* Ears */}
+      <path d="M36 32 C27 34, 27 46, 36 48" stroke="#CBA14C" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M64 32 C73 34, 73 46, 64 48" stroke="#CBA14C" strokeWidth="1.8" strokeLinecap="round" />
+
+      {/* Modak in Hand */}
+      <circle cx="68" cy="56" r="3.5" fill="#F4D48A" stroke="#CBA14C" strokeWidth="1" />
+    </svg>
+  );
+}
+
+// Festive Marigold Blossom SVG
+export function MarigoldFlower({ className = 'w-8 h-8' }) {
+  return (
+    <svg viewBox="0 0 60 60" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
+      <g fill="#E5BF67" stroke="#B88A36" strokeWidth="0.5">
+        <circle cx="30" cy="30" r="22" fillOpacity="0.25" />
+        {/* Layered Petals */}
+        <ellipse cx="30" cy="14" rx="6" ry="10" fillOpacity="0.8" />
+        <ellipse cx="30" cy="46" rx="6" ry="10" fillOpacity="0.8" />
+        <ellipse cx="14" cy="30" rx="10" ry="6" fillOpacity="0.8" />
+        <ellipse cx="46" cy="30" rx="10" ry="6" fillOpacity="0.8" />
+        <ellipse cx="18" cy="18" rx="7" ry="9" transform="rotate(-45 18 18)" fillOpacity="0.85" />
+        <ellipse cx="42" cy="42" rx="7" ry="9" transform="rotate(-45 42 42)" fillOpacity="0.85" />
+        <ellipse cx="42" cy="18" rx="7" ry="9" transform="rotate(45 42 18)" fillOpacity="0.85" />
+        <ellipse cx="18" cy="42" rx="7" ry="9" transform="rotate(45 18 42)" fillOpacity="0.85" />
+      </g>
+      {/* Center Pistil */}
+      <circle cx="30" cy="30" r="9" fill="#D98F82" />
+      <circle cx="30" cy="30" r="5" fill="#F4D48A" />
+    </svg>
+  );
+}

@@ -5,7 +5,7 @@ export default function MusicToggle() {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioCtxRef = useRef(null);
   const loopIntervalRef = useRef(null);
-  const userMutedRef = useRef(false);
+  const userMutedRef = useRef(true); // OFF by default
   const audioStartedRef = useRef(false); // tracks if audio has actually started
 
   // Soft romantic harp/bell pentatonic progression (D major / B minor romantic frequencies)
@@ -129,31 +129,8 @@ export default function MusicToggle() {
   };
 
   useEffect(() => {
-    // Attempt automatic playback on mount
-    startPlaying();
-
-    // Auto-unlock on first user gesture (scroll, touch) if browser blocked initial autoplay
-    // Note: button clicks are handled by toggleMusic directly, so exclude them
-    const unlockOnGesture = (e) => {
-      if (e.target?.closest('button')) return; // let button handle its own click
-      if (!userMutedRef.current) {
-        startPlaying();
-      }
-      cleanupListeners();
-    };
-
-    const cleanupListeners = () => {
-      window.removeEventListener('click', unlockOnGesture);
-      window.removeEventListener('touchstart', unlockOnGesture);
-      window.removeEventListener('scroll', unlockOnGesture);
-    };
-
-    window.addEventListener('click', unlockOnGesture, { passive: true });
-    window.addEventListener('touchstart', unlockOnGesture, { passive: true });
-    window.addEventListener('scroll', unlockOnGesture, { passive: true });
-
+    // Music is OFF by default; plays only on explicit user click.
     return () => {
-      cleanupListeners();
       if (loopIntervalRef.current) {
         clearInterval(loopIntervalRef.current);
       }
